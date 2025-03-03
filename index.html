@@ -4,24 +4,380 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="index.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Inter;
+}
+
+header {
+  height: 123px;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  background: linear-gradient(94.73deg, #151515 51.92%, #00220E 72.81%, #002603 95.55%, #2F7C34 111.5%),
+linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
+
+}
+
+.logo {
+  max-width: 100%;
+  height: auto;
+}
+
+.notidiv {
+  background-color: #dfffdb;
+  height: 53.09px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border: 1px;
+}
+
+.notidiv i {
+  color: #127300;
+}
+
+.notidiv p {
+  color: #127300;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.main {
+  width: 671.99658203125;
+  height: 871.4896240234375;
+  padding: 15px;
+  gap: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.main1 h1 {
+  margin-top: 0;
+  font-size: 15px;
+}
+.main1 p{
+  font-size: 15px;
+}
+.main1 span {
+  font-size: 15px;
+}
+
+.main2 {
+  width: 100%;
+  gap: 16px;
+  border-radius: 12px;
+  border: 1px solid var(--Secondary-Light-gray, #E2E2E2);
+  
+  background: #fff;
+  
+}
+.main2 span{
+  font-size: small;
+  margin-top: 8px;
+}
+.main2 .status{
+  background: #FEF9C3;
+  padding: 5px 10px 5px 10px;
+  border-radius: 100px;
+}
+
+.main2 h3 {
+  background: var(--Secondary-Modal, #F1F1F1);
+  padding: 16px 24px;
+  margin: 0;
+  font-size: 14px;
+  font-weight: bold;
+  color: #333;
+}
+
+.main2 .box {
+  width: 100%;
+  padding: 16px 24px;
+  background: #FAFBF9;
+  border-bottom: 1px solid var(--Secondary-Light-gray, #E2E2E2);
+}
+
+.main2 .box div {
+  display: flex;
+  justify-content: space-between;
+  margin: 8px 0;
+}
+
+.main2 .box div span {
+  font-weight: 500;
+  color: #333;
+}
+
+.main2 .box div span:last-child {
+  font-weight: 400;
+  color: #555;
+}
+
+
+.main3 {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+  
+}
+
+.main3 button {
+  background: #14ae00;
+  width: 230px;
+  height: 46px;
+  padding: 12px 32px;
+  border-radius: 8px;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-size: 14px;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.main3 button span {
+  margin-right: 16px; 
+}
+.main3 p {
+  font-size: 15px;
+}
+
+.main3 button:hover {
+  background-color: #128d00;
+}
+
+
+
+.main4 {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: auto;
+  gap: 24px;
+  flex-wrap: wrap;
+  
+}
+
+.main4 div {
+  border: 1px solid var(--Secondary-Light-gray, #E2E2E2);
+  padding: 20px;
+  border-radius: 8px;
+  flex: 1;
+  min-width: 250px;
+}
+.main4 p {
+  color: #777;
+  font-size: small;
+}
+
+.main5 {
+  background: #dfffdb;
+  padding: 20px;
+  text-align: start;
+  border-radius: 10px;
+  font-size: small;
+  
+}
+.main5 h4{
+  font-size: medium;
+}
+.main5 .div1{
+ display: flex;
+ gap: 15px;
+}
+
+.main5 .div1 span{
+  color:  #14AE00;
+  
+}
+
+.main5 .div2{
+  margin-top: 20px;
+  display: flex;
+ gap: 15px;
+}
+
+
+footer {
+  text-align: center;
+  padding: 20px;
+  border-top: 1px solid #ddd;
+  color: #777;
+  margin-top: 20px;
+}
+
+.iconContainer {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+
+footer div {
+  margin-top: 10px;
+}
+
+footer p {
+  margin-top: 20px;
+  color: #777;
+  font-size: small;
+}
+
+footer span {
+  font-size: smaller;
+  margin:0 3px;
+}
+
+footer span:hover {
+  cursor: pointer;
+  text-decoration: underline;
+  
+}
+
+/* Responsive Styles */
+
+@media (min-width: 1024px) { 
+  .main {
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+
+  .notidiv{
+    padding-left: 100px;
+  }
+  .main1 h1 {
+    font-size: 22px;
+  }
+  .main4 p {
+  font-size: 16px;
+  }
+ .main4 h4 {
+  font-size: 20px;
+ }
+ .main2 h3{
+  font-size: 20px;
+ }
+ .main2 .box div span{
+  font-size: 16px;
+ }
+
+ .main5{
+  font-size: medium;
+ }
+ .main5 h4 {
+  font-size: large;
+ }
+
+}
+
+@media (min-width: 1440px) { 
+  .main {
+    padding-left: 250px;
+    padding-right: 250px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+
+  .main1 h1 {
+    font-size: 25px;
+  }
+  .notidiv{
+    padding-left: 250px;
+  }
+}
+
+@media (max-width: 768px) {
+ 
+  .main{
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  .main4 {
+    gap: 16px;
+  }
+
+  .main4 div {
+    flex: 1;
+    min-width: 200px;
+  }
+
+  .main5 {
+    padding: 16px;
+  }
+  .notidiv{
+    padding-left: 40px;
+  }
+  
+}
+
+
+
+
+@media (max-width: 480px) {
+
+  .main{
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .main3 button {
+    font-size: 14px;
+  }
+
+  .main4 {
+    padding: 12px;
+    gap: 12px;
+  }
+
+  .main4 div {
+    flex: 1;
+    min-width: 180px;
+  }
+
+  footer span {
+    font-size: 12px;
+  }
+  .notidiv{
+    padding-left: 20px;
+  }
+}
+
+
+    </style>
   </head>
   <body>
     <header>
       <img src="/logo/Container.png" alt="logo" class="logo" />
     </header>
     <div class="notidiv">
-      <i class="fas fa-bell"></i>
+      <img src="/icons/bell.png" alt="bellIcon">
       <p>important : Please verify your account to access all features</p>
     </div>
 
     <div class="main">
       <div class="main1">
-        <h1>Welcome to BTI Group OU</h1>
+        <h1>Welcome to BTI Group OÜ</h1>
         <span>Dear [User's Name]</span>
         <p>
           Thank you for choosing BTI Group OU. Your account has been
@@ -44,42 +400,43 @@
       </div>
       <div class="main4">
         <div>
-          <h3>Secure Platform</h3>
+          <h4>Secure Platform</h4>
           <p>Bank-grade security with 2FA and advanced encryption</p>
         </div>
 
         <div>
-          <h3>24/7 Support</h3>
+          <h4>24/7 Support</h4>
           <p>Expert assistance available whenever you need it</p>
         </div>
       </div>
       <div class="main5">
         <h4>Need Help?</h3>
         <div class="div1">
-            <i class="fas fa-envelope"></i> <span>contact@btigroup.ee</span>
+          <img src="/icons/Frame.png" alt="emailIcon"> </i> <span>contact@btigroup.ee</span>
         </div>
         <div class="div2">
-            <i class="fas fa-phone"></i>  <span>+1 (555) 123-4567</span>
+            <img src="/icons/Frame 2.png" alt="phone icon"></i>  <span>+1 (555) 123-4567</span>
         </div>
       </div>
     </div>
 
     <footer>
       <div class="iconContainer">
-        <i class="fab fa-facebook"></i>
-        <i class="fab fa-linkedin"></i>
-        <i class="fab fa-instagram"></i>
-        <i class="fab fa-youtube"></i>
-        <i class="fab fa-twitter"></i>
-        <i class="fab fa-github"></i>
-        <i class="fab fa-creative-commons"></i>
+       <img src="/icons/Twitter Icon.png" alt="twitter">
+       <img src="/icons/Facebook Icon.png" alt="facebook">
+       <img src="/icons/instragram.png" alt="twitter">
+       <img src="/icons/LinkedIn Icon.png" alt="twitter">
+       <img src="/icons/youtube.png" alt="twitter">
+       <img src="/icons/GitHub Icon (1).png" alt="twitter">
+       <img src="/icons/play.png" alt="twitter">
+       <img src="/icons/xbox.png" alt="twitter">
       </div>
     
       <div>
         <span>Privacy Policy</span> | 
         <span>Term of Service</span> | 
         <span>Contact Us</span>
-    </div>
+      </div>
     
     
       <div>
@@ -87,7 +444,7 @@
       </div>
     
       <div>
-        <span>Unsubscribe</span> <span> - </span> <span>Email Preferences</span>
+        <span>Unsubscribe</span> <span>·</span> <span>Email Preferences</span>
       </div>
     </footer>
     
